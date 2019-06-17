@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/backgroundrecycle"
+    tools:context=".showMsgActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+
+            android:gravity="left"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme" >
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <ImageView
+
+                    android:layout_margin="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sarahah_logo2"/>
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+                <ImageButton
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="@color/bgPage"
+                    android:background="@mipmap/ic_fav_msg"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    </ScrollView>
+    <Button
+        android:background="@drawable/round_button_design"
+
+        android:onClick="logOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="log Out"/>
+    <ProgressBar
+
+        android:id="@+id/simpleProgressBarMSG"
+        style="@android:style/Widget.Holo.ProgressBar"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+
+    <include layout="@layout/buttomnavigetin"/>
+
+</LinearLayout>

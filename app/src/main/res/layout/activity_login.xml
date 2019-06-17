@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgPage"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".loginActivity">
+
+    <Button
+        android:onClick="openReg"
+        android:id="@+id/buttonReg"
+        android:visibility="gone"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+
+
+        android:background="@drawable/regester_button_design"
+        android:backgroundTint="@color/colorPrimary"
+        android:gravity="center"
+
+        android:layout_gravity="right"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:animateLayoutChanges="true"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+
+        android:src="@mipmap/ic_logo" />
+
+    <LinearLayout
+        android:animateLayoutChanges="true"
+        android:id="@+id/linearLogin"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="36dp"
+        android:orientation="vertical"
+
+        android:layout_marginBottom="50dp">
+
+        <EditText
+
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/id_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/round_button_design"
+            android:gravity="center"
+            android:hint="User Name"
+            android:inputType="text" />
+
+        <EditText
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/id_et_pass"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/round_button_design"
+            android:gravity="center"
+            android:hint="PassWord"
+            android:inputType="textPassword" />
+        <Button
+
+            android:onClick="presslogin"
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/round_button_design"
+            android:gravity="center"
+            android:text="login"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:backgroundTint="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layoutProgress"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="please wait"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"/>
+        <ProgressBar
+            android:id="@+id/simpleProgressBar"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+    </LinearLayout>
+</LinearLayout>
